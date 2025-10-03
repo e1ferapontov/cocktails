@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  margin-left: auto;
+
+  @media only screen and (min-width: 769px) {
+    flex-direction: column;
+    margin: 0;
+  }
+}
+
+.link {
+  font-size: 1rem;
+  color: var(--text-primary);
+  background-color: transparent;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition:
+    color 75ms ease,
+    background-color 150ms ease;
+
+  display: block;
+  border-radius: 0.5rem;
+  padding: 0.125rem 0.5rem;
+
+  &:hover {
+    color: var(--primary-contrastText);
+    background-color: var(--primary-light);
+  }
+
+  &:global(.active) {
+    color: var(--primary-contrastText);
+    background-color: var(--primary-main);
+  }
+
+  @media only screen and (min-width: 600px) {
+    font-size: 1.125rem;
+  }
+
+  @media only screen and (min-width: 769px) {
+    font-size: 1.25rem;
+    padding: 0.25rem 0.75rem;
+  }
+}
