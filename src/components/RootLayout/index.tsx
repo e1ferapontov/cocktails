@@ -1,8 +1,10 @@
-import { Outlet } from 'react-router';
-import styles from './styles.module.scss';
 import type { FC } from 'react';
-import { Menu } from '@components/Menu';
+import { Outlet } from 'react-router';
+
 import { Header } from '@components/Header';
+import { Menu } from '@components/Menu';
+
+import styles from './styles.module.scss';
 
 export const RootLayout: FC = () => {
   return (

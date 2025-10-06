@@ -1,4 +1,5 @@
-import { useState, type FC, type ImgHTMLAttributes } from 'react';
+import { type FC, type ImgHTMLAttributes, useState } from 'react';
+
 import styles from './styles.module.scss';
 
 export const Image: FC<ImgHTMLAttributes<HTMLImageElement>> = (props) => {

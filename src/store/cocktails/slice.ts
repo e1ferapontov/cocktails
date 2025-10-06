@@ -1,6 +1,8 @@
+import { createSlice } from '@reduxjs/toolkit';
+
 import type { Drink, DrinkCodes } from '@api';
 import { SLICE_KEYS, VALID_CODES } from '@common/constants';
-import { createSlice } from '@reduxjs/toolkit';
+
 import { getCocktails } from './thunks';
 
 export type Drinks = Record<DrinkCodes, Drink[]>;

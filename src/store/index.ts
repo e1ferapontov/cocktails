@@ -1,5 +1,4 @@
-export { store, useAppDispatch, useAppSelector, persistor } from './config';
-
+export { persistor, store, useAppDispatch, useAppSelector } from './config';
 export * from './selectors';
 
 // modules

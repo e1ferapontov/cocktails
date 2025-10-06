@@ -1,3 +1,5 @@
+@use '@common/styles' as *;
+
 .container {
   display: flex;
   align-items: center;
@@ -12,7 +14,7 @@
   width: 2rem;
   margin-top: -6px; // centering on the glass
 
-  @media only screen and (min-width: 600px) {
+  @include sm-up {
     height: 3rem;
     width: 3rem;
     margin-top: -12px; // centering on the glass
@@ -24,7 +26,7 @@
   font-weight: 600;
   display: none;
 
-  @media only screen and (min-width: 600px) {
+  @include sm-up {
     display: block;
   }
 }

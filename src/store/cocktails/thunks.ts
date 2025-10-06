@@ -1,7 +1,8 @@
-import { searchDrinks, type DrinkCodes } from '@api';
-import { SLICE_KEYS } from '@common/constants';
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { AxiosError, HttpStatusCode } from 'axios';
+import { type AxiosError, HttpStatusCode } from 'axios';
+
+import { type DrinkCodes, searchDrinks } from '@api';
+import { SLICE_KEYS } from '@common/constants';
 
 export const getCocktails = createAsyncThunk(
   `${SLICE_KEYS.COCKTAILS}/GET_COCKTAILS`,

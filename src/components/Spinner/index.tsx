@@ -1,6 +1,7 @@
 // based on MUI & https://github.com/icarus-sullivan/react-spinner-material
 
-import { useMemo, type FC } from 'react';
+import { type FC, useMemo } from 'react';
+
 import styles from './styles.module.scss';
 
 type SpinnerProps = Omit<React.HTMLProps<HTMLDivElement>, 'size'> & {
@@ -24,13 +25,15 @@ export const Spinner: FC<SpinnerProps> = (props) => {
     };
   }, [size, style]);
 
+  const memoizedClassName = useMemo(() => {
+    return `${styles.react_spinner_material} ${className ?? ''}`;
+  }, [className]);
+
   return (
     <div
       {...rest}
-      className={[styles.react_spinner_material, className].join(' ')}
+      className={memoizedClassName}
       style={memoizedStyle}
     />
   );
 };
-
-export default Spinner;

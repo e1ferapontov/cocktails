@@ -59,6 +59,8 @@ export type Drink = {
   strMeasure15: Nullable<string>;
 };
 
+export const INGREDIENTS_KEYS_QTY = 15;
+
 export type DrinksResponse = {
   drinks: Nullable<Drink[]>;
 };

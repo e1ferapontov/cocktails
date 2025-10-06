@@ -1,3 +1,33 @@
+@mixin xs-up {
+  @media only screen and (min-width: 540px) {
+    @content;
+  }
+}
+
+@mixin sm-up {
+  @media only screen and (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin md-up {
+  @media only screen and (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin lg-up {
+  @media only screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin xl-up {
+  @media only screen and (min-width: 1440px) {
+    @content;
+  }
+}
+
 :root {
   --text-primary: #fff;
   --text-secondary: #ffffffb3;
@@ -16,19 +46,6 @@
 
   --zIndex-header: 1000;
   --zIndex-overlay: 9999;
-
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: var(--text-primary);
-  background-color: var(--background);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 @media (prefers-color-scheme: light) {
@@ -45,14 +62,4 @@
     --background: #f8f8f8;
     --divider: rgba(0, 0, 0, 0.12);
   }
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-#root {
-  min-width: 360px;
-  min-height: 100vh;
 }

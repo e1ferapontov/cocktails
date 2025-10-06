@@ -1,3 +1,5 @@
+@use '@common/styles' as *;
+
 .container {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -6,16 +8,16 @@
 
   transition: grid-template-columns 150ms linear;
 
-  @media only screen and (min-width: 600px) {
+  @include sm-up {
     padding: 1.5rem 2rem;
     gap: 1.5rem;
   }
 
-  @media only screen and (min-width: 769px) {
+  @include md-up {
     grid-template-columns: minmax(min-content, 180px) minmax(0, 1fr);
   }
 
-  @media only screen and (min-width: 1024px) {
+  @include lg-up {
     grid-template-columns: minmax(min-content, 240px) minmax(0, 1fr);
   }
 }
@@ -35,7 +37,7 @@
   align-items: center;
   gap: 0.5rem;
 
-  @media only screen and (min-width: 769px) {
+  @include md-up {
     padding: unset;
     margin: unset;
     margin-top: -1.5rem;

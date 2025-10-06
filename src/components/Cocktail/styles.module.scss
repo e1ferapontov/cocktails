@@ -1,3 +1,5 @@
+@use '@common/styles' as *;
+
 .container {
   display: grid;
   grid-template-columns: unset;
@@ -8,12 +10,12 @@
   background-color: var(--paper);
   box-shadow: var(--paper-shadow);
 
-  @media only screen and (min-width: 540px) {
+  @include xs-up {
     grid-template-columns: minmax(0, 2fr) minmax(0, 2fr);
     grid-template-rows: unset;
   }
 
-  @media only screen and (min-width: 769px) {
+  @include md-up {
     max-width: 64rem;
   }
 }
@@ -21,7 +23,7 @@
 .card_content {
   padding: 0.625rem;
 
-  @media only screen and (min-width: 600px) {
+  @include sm-up {
     padding: 1rem;
   }
 }
@@ -35,7 +37,7 @@
     width: 100%;
   }
 
-  @media only screen and (min-width: 540px) {
+  @include xs-up {
     height: 100%;
 
     & img {
@@ -50,7 +52,7 @@
   margin-top: 0;
   margin-bottom: 0.625rem;
 
-  @media only screen and (min-width: 600px) {
+  @include sm-up {
     margin-bottom: 1rem;
   }
 }

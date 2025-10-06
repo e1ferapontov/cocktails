@@ -1,9 +1,11 @@
-import { useDispatch, useSelector, type TypedUseSelectorHook } from 'react-redux';
-import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { persistStore, persistReducer, FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE } from 'redux-persist';
+import { type TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
+import { FLUSH, PAUSE, PERSIST, persistReducer, persistStore, PURGE, REGISTER, REHYDRATE } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import expireReducer from 'redux-persist-expire';
-import { CACHE_TTL_SEC, SLICE_KEYS } from '@common/constants';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
+
+import { CACHE_TIME_TO_LIVE, SLICE_KEYS } from '@common/constants';
+
 import { cocktailsInitialState, cocktailsReducer } from './cocktails/slice';
 
 const rootReducer = combineReducers({
@@ -17,7 +19,7 @@ const persistedReducer = persistReducer(
     transforms: [
       expireReducer(SLICE_KEYS.COCKTAILS, {
         persistedAtKey: '__persisted_at',
-        expireSeconds: CACHE_TTL_SEC,
+        expireSeconds: CACHE_TIME_TO_LIVE,
         expiredState: cocktailsInitialState,
         autoExpire: true,
       }),

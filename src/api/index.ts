@@ -1,8 +1,9 @@
 import axios, { type GenericAbortSignal } from 'axios';
+
 import type { DrinkCodes, DrinksResponse } from './types';
 
 export const apiInstance = axios.create({
-  baseURL: 'https://www.thecocktaildb.com/api/json/v1/1',
+  baseURL: import.meta.env.VITE_API_BASE_URL,
 });
 
 export const searchDrinks = (code: DrinkCodes, signal?: GenericAbortSignal) => {
@@ -14,4 +15,4 @@ export const searchDrinks = (code: DrinkCodes, signal?: GenericAbortSignal) => {
   });
 };
 
-export { DrinkCodes, type Drink } from './types';
+export { type Drink, DrinkCodes, INGREDIENTS_KEYS_QTY } from './types';

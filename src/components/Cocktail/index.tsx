@@ -1,9 +1,12 @@
-import { Fragment, useMemo, type FC } from 'react';
+import { type FC, Fragment, useMemo } from 'react';
+
 import type { Drink } from '@api';
-import styles from './styles.module.scss';
 import { getIngredients } from '@common/getIngredients';
+
 import placeholder from '/placeholder.svg';
 import { Image } from '../Image';
+
+import styles from './styles.module.scss';
 
 export const Cocktail: FC<Drink> = (props) => {
   const { idDrink, strDrink, strInstructions, strCategory, strAlcoholic, strGlass, strDrinkThumb, ...rest } = props;

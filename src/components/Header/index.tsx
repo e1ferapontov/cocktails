@@ -1,7 +1,9 @@
-import { Link } from 'react-router';
-import logo from '/favicon.svg';
-import styles from './styles.module.scss';
 import type { FC } from 'react';
+import { Link } from 'react-router';
+
+import logo from '/favicon.svg';
+
+import styles from './styles.module.scss';
 
 export const Header: FC = () => {
   return (

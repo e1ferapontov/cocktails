@@ -1,4 +1,5 @@
-import { DrinkCodes } from '@api';
+import { type DrinkCodes } from '@api';
+
 import type { RootState } from './config';
 
 export const selectIsLoading = (state: RootState) => {

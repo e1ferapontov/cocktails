@@ -1,13 +1,15 @@
+@use '@common/styles' as *;
+
 .container {
   display: grid;
   grid-template-rows: auto;
   gap: 1rem;
 
-  @media only screen and (min-width: 769px) {
+  @include md-up {
     gap: 2rem;
   }
 
-  @media only screen and (min-width: 1440px) {
+  @include xl-up {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     max-width: 130rem;
   }

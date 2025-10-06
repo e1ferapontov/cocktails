@@ -1,8 +1,10 @@
+import { type FC, useEffect, useLayoutEffect } from 'react';
+
 import type { DrinkCodes } from '@api';
 import { Cocktail } from '@components/Cocktail';
 import { LoadingOverlay } from '@components/LoadingOverlay';
 import { cocktailsThunks, selectDrinksByCode, selectIsLoadingByCode, useAppDispatch, useAppSelector } from '@store';
-import { useEffect, useLayoutEffect, type FC } from 'react';
+
 import styles from './styles.module.scss';
 
 export const CocktailsPage: FC<{ drinkCode: DrinkCodes }> = (props) => {

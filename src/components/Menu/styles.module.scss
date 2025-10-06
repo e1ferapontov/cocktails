@@ -1,10 +1,12 @@
+@use '@common/styles' as *;
+
 .container {
   display: flex;
   flex-direction: row;
   gap: 0.625rem;
   margin-left: auto;
 
-  @media only screen and (min-width: 769px) {
+  @include md-up {
     flex-direction: column;
     margin: 0;
   }
@@ -34,11 +36,11 @@
     background-color: var(--primary-main);
   }
 
-  @media only screen and (min-width: 600px) {
+  @include sm-up {
     font-size: 1.125rem;
   }
 
-  @media only screen and (min-width: 769px) {
+  @include md-up {
     font-size: 1.25rem;
     padding: 0.25rem 0.75rem;
   }

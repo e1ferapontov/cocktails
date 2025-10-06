@@ -1,4 +1,5 @@
 import { createBrowserRouter, Navigate, type RouteObject } from 'react-router';
+
 import { DrinkCodes } from '@api';
 import { VALID_CODES } from '@common/constants';
 import { RootLayout } from '@components/RootLayout';
@@ -19,13 +20,10 @@ export const router = createBrowserRouter([
           />
         ),
       },
-      ...VALID_CODES.map(
-        (code) =>
-          ({
-            path: code,
-            element: <CocktailsPage drinkCode={code} />,
-          }) as RouteObject,
-      ),
+      ...VALID_CODES.map<RouteObject>((code) => ({
+        path: code,
+        element: <CocktailsPage drinkCode={code} />,
+      })),
       {
         path: '*',
         Component: ErrorPage,

@@ -1,7 +1,9 @@
-import { NavLink } from 'react-router';
-import styles from './styles.module.scss';
-import { VALID_CODES } from '@common/constants';
 import type { FC } from 'react';
+import { NavLink } from 'react-router';
+
+import { VALID_CODES } from '@common/constants';
+
+import styles from './styles.module.scss';
 
 export const Menu: FC = () => {
   return (
