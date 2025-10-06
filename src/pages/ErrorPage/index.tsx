@@ -1,6 +1,11 @@
 import type { FC } from 'react';
+import styles from './styles.module.scss';
 
-export const ErrorPage: FC = (props) => {
-  console.log('props', props);
-  return <div>404 not found</div>;
+export const ErrorPage: FC = () => {
+  return (
+    <div className={styles.container}>
+      <h2 className={styles.header}>404</h2>
+      <p className={styles.text}>That's definitely not what you're looking for</p>
+    </div>
+  );
 };
