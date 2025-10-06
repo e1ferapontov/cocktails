@@ -1,4 +1,4 @@
-// based on https://github.com/icarus-sullivan/react-spinner-material
+// based on MUI & https://github.com/icarus-sullivan/react-spinner-material
 
 import { useMemo, type FC } from 'react';
 import styles from './styles.module.scss';
