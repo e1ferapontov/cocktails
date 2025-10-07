@@ -14,7 +14,7 @@ export const getCocktails = createAsyncThunk(
         return data;
       }
 
-      // TOOD: couldn't fail the API with !200 so not sure what the value could be
+      // TODO: couldn't fail the API with !200 so not sure what the value could be
       return rejectWithValue(JSON.stringify(data));
     } catch (error) {
       return rejectWithValue((error as AxiosError)?.message);
